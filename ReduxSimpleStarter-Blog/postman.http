@@ -1,0 +1,16 @@
+GET http://reduxblog.herokuapp.com/api/posts?key=umnk003 HTTP/1.1
+
+###
+
+POST http://reduxblog.herokuapp.com/api/posts?key=umnk003 HTTP/1.1 
+content-type: application/json
+
+{
+    "title": "sample",
+    "categories": "blah",
+    "content": "something"
+}
+
+###
+
+GET http://reduxblog.herokuapp.com/api/posts/292442?key=umnk003 HTTP/1.1 
