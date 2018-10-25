@@ -6,9 +6,7 @@ export default class App extends Component {
     return (
       <div id="special-size">
         <NavBar />
-        <hr className="my-1" />
         <JumboTron />
-        <hr className="my-1" />
       </div>
     );
   }
