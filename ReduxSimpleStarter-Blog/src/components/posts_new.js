@@ -13,8 +13,8 @@ class PostsNew extends Component {
             <div className={className}>
                 <label>{field.label}</label>
                 <input
-                    className="form-controll"
-                    type="text" 
+                    className="form-control"
+                    type="text"
                     {...field.input}
                 />
                 <div className="text-help">
@@ -31,20 +31,20 @@ class PostsNew extends Component {
     }
 
     render() {
-        const { handleSubmit } = this.props; 
+        const { handleSubmit } = this.props;
         return (
             <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-                <Field 
+                <Field
                     name="title"
                     label="Title"
                     component={this.renderField}
                 />
-                <Field 
+                <Field
                     name="categories"
                     label="Category"
                     component={this.renderField}
                 />
-                <Field 
+                <Field
                     name="content"
                     label="Content"
                     component={this.renderField}
