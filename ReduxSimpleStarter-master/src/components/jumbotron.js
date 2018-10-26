@@ -4,9 +4,10 @@ export default class JumboTron extends Component {
   render() {
     return (
       <div className="jumbotron container-fluid bgimg-1" id="special-size">
+        <br />
         <div className="row mt-4">
-          <div class="col" />
-          <div class="col" id="special-opbg">
+          <div className="col" />
+          <div className="col" id="special-opbg">
             <h1 className="display-4">
               <strong>Hi!</strong>
             </h1>
