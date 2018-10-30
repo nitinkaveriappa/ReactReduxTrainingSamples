@@ -31,23 +31,19 @@ class Board extends Component {
   }
 
   render() {
+    let count = 0;
+    const index = [1, 2, 3];
     return (
       <div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+        {index.map((v1, i1) => {
+          return (
+            <div key={i1} className="board-row">
+              {index.map((v2, i2) => {
+                return <span key={i2}>{this.renderSquare(count++)}</span>;
+              })}
+            </div>
+          );
+        })}
       </div>
     );
   }
@@ -98,7 +94,6 @@ class Game extends React.Component {
       xIsNext: !this.state.xIsNext,
       toggle: true
     });
-    console.log(this.state);
   }
 
   jumpTo(step) {
